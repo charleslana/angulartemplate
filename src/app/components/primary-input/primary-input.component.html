@@ -1,0 +1,15 @@
+<div class="input-wrapper">
+  <label [for]="inputName">{{ label }}</label>
+  <div class="input-content">
+    <input
+      (input)="onInput($event)"
+      [id]="id"
+      [placeholder]="placeholder"
+      [type]="type"
+      [value]="value"
+    />
+    <div class="icon">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</div>
