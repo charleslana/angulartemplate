@@ -1,1 +1,49 @@
-<p>signup works!</p>
+<app-default-login-layout
+  (navigate)="navigate()"
+  (submit)="submit()"
+  [disablePrimaryBtn]="!signupForm.valid"
+  primaryBtnText="Signup Now"
+  secondaryBtnText="Login Now"
+  title="Sign in and start today!t"
+>
+  <form [formGroup]="signupForm">
+    <app-primary-input
+      formControlName="name"
+      id="name-input"
+      inputName="name"
+      label="Your name"
+      placeholder="John Doe"
+      type="text"
+    >
+      <img alt="email icon" height="24" src="/assets/svg/email-icon.svg" width="24"/>
+    </app-primary-input>
+    <app-primary-input
+      formControlName="email"
+      id="email-input"
+      inputName="email"
+      label="Email"
+      placeholder="johndoe@gmail.com"
+      type="email"
+    >
+      <img alt="email icon" height="24" src="/assets/svg/email-icon.svg" width="24"/>
+    </app-primary-input>
+    <app-primary-input
+      formControlName="password"
+      id="password-input"
+      inputName="password"
+      label="Your Password"
+      type="password"
+    >
+      <img alt="password icon" height="24" src="/assets/svg/password-icon.svg" width="24"/>
+    </app-primary-input>
+    <app-primary-input
+      formControlName="passwordConfirm"
+      id="password-confirm-input"
+      inputName="passwordConfirm"
+      label="Confirm your Password"
+      type="password"
+    >
+      <img alt="password icon" height="24" src="/assets/svg/password-icon.svg" width="24"/>
+    </app-primary-input>
+  </form>
+</app-default-login-layout>
