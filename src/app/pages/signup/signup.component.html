@@ -4,17 +4,17 @@
   [disablePrimaryBtn]="!signupForm.valid"
   [primaryBtnId]="'btn-primary-signup'"
   [secondaryBtnId]="'btn-secondary-login'"
-  primaryBtnText="Signup Now"
-  secondaryBtnText="Login Now"
-  title="Sign in and start today!"
+  primaryBtnText="Registre-se"
+  secondaryBtnText="Já tem conta?"
+  title="Entre e comece hoje mesmo!"
 >
   <form [formGroup]="signupForm">
     <app-primary-input
       formControlName="name"
       id="name-input"
       inputName="name"
-      label="Your name"
-      placeholder="John Doe"
+      label="Seu nome"
+      placeholder="João da silva"
       type="text"
     >
       <img alt="email icon" height="24" src="/assets/svg/email-icon.svg" width="24"/>
@@ -23,8 +23,8 @@
       formControlName="email"
       id="email-input"
       inputName="email"
-      label="Email"
-      placeholder="johndoe@gmail.com"
+      label="E-mail"
+      placeholder="email@exemplo.com"
       type="email"
     >
       <img alt="email icon" height="24" src="/assets/svg/email-icon.svg" width="24"/>
@@ -33,7 +33,7 @@
       formControlName="password"
       id="password-input"
       inputName="password"
-      label="Your Password"
+      label="Sua senha"
       type="password"
     >
       <img alt="password icon" height="24" src="/assets/svg/password-icon.svg" width="24"/>
@@ -42,7 +42,7 @@
       formControlName="passwordConfirm"
       id="password-confirm-input"
       inputName="passwordConfirm"
-      label="Confirm your Password"
+      label="Confirme sua senha"
       type="password"
     >
       <img alt="password icon" height="24" src="/assets/svg/password-icon.svg" width="24"/>

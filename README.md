@@ -1,27 +1,49 @@
 # Angulartemplate
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.11.
+## Instalar o ng
 
-## Development server
+```bash
+sudo npm install -g @angular/cli@17
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Instalar dependências
 
-## Code scaffolding
+```bash
+npm i
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Iniciar
 
-## Build
+```bash
+npm start
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Gerar componentes
 
-## Running unit tests
+```bash
+ng g c components/primary-input
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Gerar serviços
 
-## Running end-to-end tests
+```bash
+ng g s services/auth-guard
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Gerar páginas
 
-## Further help
+```bash
+ng g c pages/signup
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Gerar interceptores
+
+```bash
+ng g interceptor auth
+```
+
+## Criar projeto com o ng
+
+```bash
+ng new
+```

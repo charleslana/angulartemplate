@@ -3,13 +3,13 @@ import {UserService} from '../../services/user.service'; // Importe o UserServic
 import {ToastrService} from 'ngx-toastr'; // Para mostrar mensagens de sucesso/erro
 
 @Component({
-  selector: 'app-user',
+  selector: 'app-admin',
   standalone: true,
   imports: [],
-  templateUrl: './user.component.html',
-  styleUrls: ['./user.component.scss']
+  templateUrl: './admin.component.html',
+  styleUrls: ['./admin.component.scss']
 })
-export class UserComponent implements OnInit {
+export class AdminComponent implements OnInit {
 
   name: string | null = null;
 
@@ -23,11 +23,26 @@ export class UserComponent implements OnInit {
     this.userService.getUser().subscribe({
       next: (data) => {
         console.log('Usuário:', data);
-        this.name = data.name;
+        this.name = data.name
       },
       error: (err) => {
         this.toastService.error('Erro ao carregar dados do usuário!');
         console.error('Erro ao carregar dados do usuário:', err);
+      }
+    });
+
+    this.userService.getAdminTest().subscribe({
+      next: (data) => {
+        console.log('Admin Test:', data);
+        if (data.message) {
+          this.toastService.success('Administrador autenticado');
+        } else {
+          this.toastService.error('Falha ao autenticar administrador');
+        }
+      },
+      error: (err) => {
+        this.toastService.error('Erro ao verificar administrador!');
+        console.error('Erro ao verificar administrador:', err);
       }
     });
   }

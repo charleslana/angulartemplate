@@ -4,17 +4,17 @@
   [disablePrimaryBtn]="!loginForm.valid"
   [primaryBtnId]="'btn-primary-login'"
   [secondaryBtnId]="'btn-secondary-signup'"
-  primaryBtnText="Login Now"
-  secondaryBtnText="Signup Now"
-  title="Login into your account"
+  primaryBtnText="Fazer login"
+  secondaryBtnText="Faça o cadastro"
+  title="Entre na sua conta"
 >
   <form [formGroup]="loginForm">
     <app-primary-input
       formControlName="email"
       id="email-input"
       inputName="email"
-      label="Email"
-      placeholder="johndoe@gmail.com"
+      label="E-mail"
+      placeholder="email@exemplo.com"
       type="email"
     >
       <img alt="email icone" height="24" src="/assets/svg/email-icon.svg" width="24"/>
@@ -23,11 +23,11 @@
       formControlName="password"
       id="password-input"
       inputName="password"
-      label="Your Password"
+      label="Sua senha"
       type="password"
     >
       <img alt="password icon" height="24" src="/assets/svg/password-icon.svg" width="24"/>
     </app-primary-input>
-    <span>Forgot password?</span>
+    <span>Esqueceu a senha?</span>
   </form>
 </app-default-login-layout>

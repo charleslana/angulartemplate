@@ -5,7 +5,6 @@ import {PrimaryInputComponent} from '../../components/primary-input/primary-inpu
 import {Router} from '@angular/router';
 import {LoginService} from '../../services/login.service';
 import {ToastrService} from 'ngx-toastr';
-import {NgOptimizedImage} from '@angular/common';
 
 interface LoginForm {
   email: FormControl,
@@ -18,8 +17,7 @@ interface LoginForm {
   imports: [
     DefaultLoginLayoutComponent,
     ReactiveFormsModule,
-    PrimaryInputComponent,
-    NgOptimizedImage
+    PrimaryInputComponent
   ],
   providers: [
     LoginService
