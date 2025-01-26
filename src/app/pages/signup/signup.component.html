@@ -2,9 +2,11 @@
   (navigate)="navigate()"
   (submit)="submit()"
   [disablePrimaryBtn]="!signupForm.valid"
+  [primaryBtnId]="'btn-primary-signup'"
+  [secondaryBtnId]="'btn-secondary-login'"
   primaryBtnText="Signup Now"
   secondaryBtnText="Login Now"
-  title="Sign in and start today!t"
+  title="Sign in and start today!"
 >
   <form [formGroup]="signupForm">
     <app-primary-input
